@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Draw the mod's logo.png (the icon Geode shows in the mod list).
 
 Written by hand with Pillow instead of a generative model on purpose: the icon is

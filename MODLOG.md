@@ -1,4 +1,4 @@
-﻿# MODLOG — Per-Gamemode Glow (Geometry Dash / Geode)
+# MODLOG — Per-Gamemode Glow (Geometry Dash / Geode)
 
 Цель: glow настраивается независимо для каждой формы игрока (куб, корабль, шар, UFO,
 волна/ dart, робот, паук, свинг, джетпак): цвет, яркость, режим смешивания, вкл/выкл.

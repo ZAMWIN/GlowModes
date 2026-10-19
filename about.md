@@ -18,6 +18,10 @@ kit's glow colour, and ignores a per-player glow colour for those two modes -- s
 `spider` cannot take effect on this build. The mod says so in its log and documents it in the
 README.
 
-Made by zam, with the help of an AI assistant (Geode SDK).
+Made by zam, with the help of an AI assistant (opencode, DeepSeek V4.1 Flash) — the author set the
+goals and checked every step in the game.
+
+License for the mod's code: GPL-3.0 (full text in the repository). Geometry Dash and its assets
+belong to RobTop Games.
 
 See `README.md` for the config format, hotkeys, limitations and compatibility notes.
