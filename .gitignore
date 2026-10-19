@@ -1,0 +1,15 @@
+# Build output (the .geode is attached to GitHub releases, not committed)
+build/
+build-*/
+*.geode
+*.geode_cache
+.geode_cache
+
+# Local notes / scratch
+notes/
+*.local.md
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store

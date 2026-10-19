@@ -1,0 +1,8 @@
+# Keep the repository in LF; the source, config and docs are shared as-is.
+* text=auto eol=lf
+
+# Binaries
+*.png binary
+*.lib binary
+*.exp binary
+*.geode binary
