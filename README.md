@@ -13,14 +13,45 @@ re-read on the fly and from in-game hotkeys, and it adds an **RGB mode**: one ke
 sweep the whole colour wheel smoothly for all gamemodes at once. Client-side only — it never writes
 the game's global glow variables, so it coexists with other glow and icon-colour mods.
 
+**Quick start (English):** 1. Install [Geode](https://geode-sdk.org/) for your GD build (2.2xx).
+2. Drop `zam.per-gamemode-glow.geode` into `<game folder>\geode\mods\`. 3. Start the game and make
+sure **Glow** is on in your icon kit (the mod respects that toggle). 4. Open
+`<game folder>\geode\config\zam.per-gamemode-glow\per_gamemode_glow.json` and set `"enabled": true`
+plus a colour for the gamemodes you want. 5. Save the file — it applies in game within ~half a
+second, no restart. 6. Press `F12` for a rainbow across every gamemode; `PageDown`/`PageUp` change
+its speed. Nothing visible? Read the log in `<game folder>\geode\logs\` and the limitations section.
+
 ---
 
-## Установка
+## Быстрый старт
 
-1. Установите [Geode](https://geode-sdk.org/) для вашей версии GD (2.2xx).
-2. Положите `zam.per-gamemode-glow.geode` в папку `mods` рядом с игрой:
-   `...\steamapps\common\Geometry Dash\geode\mods\`
-3. Запустите игру — мод загрузится сам.
+1. **Лоадер.** Если [Geode](https://geode-sdk.org/) ещё не стоит — поставьте его в вашу версию
+   Geometry Dash (2.2xx).
+2. **Мод.** Скачанный `zam.per-gamemode-glow.geode` положите в папку `mods` внутри папки игры:
+   `...\Geometry Dash\geode\mods\`
+3. **Первый запуск.** Запустите игру: мод загрузится сам и создаст рядом свой конфиг —
+   `...\Geometry Dash\geode\config\zam.per-gamemode-glow\per_gamemode_glow.json`
+4. **Галочка Glow.** В настройках икон-кита должно быть включено свечение: по умолчанию мод
+   уважает эту настройку игры. (Хотите, чтобы мод светил даже при выключенной галочке — поставьте
+   `"respect-global-toggle": false`.)
+5. **Настройка.** Откройте конфиг блокнотом и включите нужные режимы, например красный куб и
+   розовый паук:
+
+   ```json
+   "cube":   { "enabled": true, "color": "#FF2D2D" },
+   "spider": { "enabled": true, "color": "#FF00FF" }
+   ```
+
+   Цвет обязателен, остальные параметры режима (`brightness`, `blending`, `pulse`) можно не
+   указывать — возьмутся значения по умолчанию. Сохранили файл — в игре всё применилось за
+   ~полсекунды, перезапускать игру не нужно.
+6. **Радуга.** Клавиша `F12` включает перелив по всем цветам сразу для всех режимов. Скорость —
+   `PageDown` / `PageUp`; в лог печатается готовое значение, которое можно вписать в конфиг.
+7. **Если ничего не видно.** Смотрите журнал в `...\Geometry Dash\geode\logs\`: при
+   `"debug": true` мод пишет туда каждое применённое значение. Частые причины — выключенная
+   галочка Glow, режим `robot`/`spider` (см. «Ограничения и известные особенности») или другое
+   свечение поверх (см. «Совместимость и конфликты»).
+8. **Вернуть ваниль.** Как выключить мод целиком — в разделе «Как полностью отключить мод».
 
 ---
 
