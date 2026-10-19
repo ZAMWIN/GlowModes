@@ -29,14 +29,17 @@ the game's global glow variables, so it coexists with other glow and icon-colour
 При первом запуске мод создаёт файл:
 
 ```
-<папка сохранений Geode>/config/zam.per-gamemode-glow/per_gamemode_glow.json
+<папка игры>\geode\config\zam.per-gamemode-glow\per_gamemode_glow.json
 ```
 
-Обычно это:
+То есть не в сохранениях, а в самой папке игры, рядом с `geode\mods`. Для обычной Steam-установки:
 
 ```
-%LOCALAPPDATA%\GeometryDash\geode\config\zam.per-gamemode-glow\per_gamemode_glow.json
+C:\Program Files (x86)\Steam\steamapps\common\Geometry Dash\geode\config\zam.per-gamemode-glow\per_gamemode_glow.json
 ```
+
+Точный путь мод один раз печатает в лог при создании файла (`wrote default config to ...`); сами
+логи лежат в `<папка игры>\geode\logs\`.
 
 Файл **перечитывается на лету**: как только вы сохранили его на диске, мод подхватывает
 изменения в течение ~полсекунды (перезапуск не нужен). Правки возвращают значения из файла —
