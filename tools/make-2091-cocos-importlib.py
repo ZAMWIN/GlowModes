@@ -61,14 +61,17 @@ REQUIRED_EXPORTS = [
 ]
 
 DLL_CANDIDATES = [
-    Path(r"D:\Geometry Dash\lab\Geometry Dash\libcocos2d.dll"),
-    Path(os.environ.get("GD_INSTALL_DIR", "")) / "libcocos2d.dll"
+    # Explicit override, e.g. a test install next to the real one.
+    Path(os.environ["GD_INSTALL_DIR"]) / "libcocos2d.dll"
     if os.environ.get("GD_INSTALL_DIR")
     else None,
+    # The usual Steam locations.
     Path(os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)"))
     / "Steam" / "steamapps" / "common" / "Geometry Dash" / "libcocos2d.dll",
     Path(os.environ.get("ProgramFiles", r"C:\Program Files"))
     / "Steam" / "steamapps" / "common" / "Geometry Dash" / "libcocos2d.dll",
+    # Next to the current directory, for portable installs.
+    Path.cwd() / "libcocos2d.dll",
 ]
 
 VS_TOOL_GLOBS = [

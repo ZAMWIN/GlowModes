@@ -1,4 +1,4 @@
-# MODLOG — Per-Gamemode Glow (Geometry Dash / Geode)
+﻿# MODLOG — Per-Gamemode Glow (Geometry Dash / Geode)
 
 Цель: glow настраивается независимо для каждой формы игрока (куб, корабль, шар, UFO,
 волна/ dart, робот, паук, свинг, джетпак): цвет, яркость, режим смешивания, вкл/выкл.
@@ -7,7 +7,7 @@
 ## 0. Intake
 
 - Игра: Geometry Dash (Steam appid 322170), установлена.
-- Путь: `C:\Program Files (x86)\Steam\steamapps\common\Geometry Dash`
+- Путь: `<...>\steamapps\common\Geometry Dash`
 - Идея: per-gamemode glow (цвет/яркость/blending/пульсация) вместо глобального.
 - Definition of done: мод собран в `.geode`, загружается в игре, каждая форма использует
   свой профиль; поведение проверено в игре (скриншот/видео).
@@ -118,7 +118,7 @@ bool m_addGlow;
 ## 3. Lab setup
 - Backup сейвов GD: `%LOCALAPPDATA%\Geometry Dash` (уточнить путь; на этой машине папки нет →
   игра ещё не запускалась? проверить). Сделать `um backup` перед первым мод-запуском.
-- Проект мода: `D:\Geometry Dash\PerGamemodeGlow` (вне папки игры).
+- Проект мода: отдельная папка с исходниками вне папки игры.
 - Папку игры не коммитить; декомпиляцию/выгрузки хранить отдельно.
 
 ## 4. План реализации (см. README.md)
@@ -208,7 +208,7 @@ static auto func = wrapFunction<FunctionType>(base::get() + 0x388d80, ...);   //
 3. Сами биндинги 2.2091 релизным SDK 5.11.2 не собираются вообще — подробности и решение
    в §7 (из v6 берутся только описания cocos2d-ABI 2.2091, SDK остаётся релизный).
 
-**Инструменты** (лежат в `D:\Geometry Dash\lab-tools\`): `detect_version.py` (версия игры по
+**Инструменты** (личная папка лабораторных скриптов): `detect_version.py` (версия игры по
 `.pdata`), `check_imports.py` (неразрешённые импорты мода против экспортов DLL игры),
 `check_missing_includes.py` (каких `Geode/...` заголовков не хватает биндингам),
 `layout_diff_all.py` (сравнение списков полей классов между версиями биндингов),
